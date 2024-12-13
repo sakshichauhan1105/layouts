@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  max-width: 1200px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "left top center"
+    "left bottom right";
+}
+
+.item {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item.tall {
+  display: flex;
+  grid-row: span 2; /* Makes image 3 taller */
+}
+
+/* Use grid areas to position the elements */
+.item:nth-child(1) {
+  grid-area: left;
+}
+
+.item:nth-child(2) {
+  grid-area: top;
+}
+
+.item:nth-child(3) {
+  grid-area: center;
+}
+
+.item:nth-child(4) {
+  grid-area: bottom;
+}
+
+.item:nth-child(5) {
+  grid-area: right;
+}
+
+.item:nth-child(6) {
+  grid-area: right;
+}
